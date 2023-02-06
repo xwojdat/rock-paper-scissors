@@ -4,11 +4,12 @@ let cScore = 0;
 
 options.forEach((option) => {
     option.addEventListener("click", function () {
-        const pInput = this.textContent;
+        const pInput = this.value;
 
         const cOptions = ["Kamień", "Papier", "Nożyce"];
         const cInput = cOptions[Math.floor(Math.random() * 3)];
 
+        updateMoves(pInput, cInput);
         compareInputs(pInput, cInput);
         updateScore();
         if (checkWinner()) {
@@ -75,4 +76,9 @@ function checkWinner() {
             return true;
     }
     return false;
+}
+
+function updateMoves(pInput, cInput) {
+    document.getElementById("p-move").src = `./assets/${pInput}.svg`;
+    document.getElementById("c-move").src = `./assets/${cInput}.svg`;
 }
