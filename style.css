@@ -1,7 +1,9 @@
 *{
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    background: linear-gradient(#E96874, #6E3663, #2B0830);
-    color: white;
+    background: #082c6c;
+    color: #fff;
 }
 
 .game{
@@ -12,14 +14,14 @@
     justify-content: center;
     align-items: center;
 }
-
+ 
 .title{
     position: absolute;
     top: 0;
     font-size: 4rem;
     z-index: 2;
 }
-
+ 
 .score{
     display: flex;
     width: 30vw;
@@ -28,14 +30,13 @@
     top: 70px;
     z-index: 1;
 }
-
-.p-count,
-.c-count{
+ 
+.p-count,.c-count{
     text-align: center;
     font-size: 1.5rem;
     margin-top: 1rem;
 }
-
+ 
 .options{
     display: flex;
     width: 50vw;
@@ -43,30 +44,35 @@
     margin-top: 2rem;
 }
 
-.rock,
-.paper,
-.scissors{
-    padding: 1rem;
+.rock, .paper, .scissors{
+    padding: 0.8rem;
     width: 100px;
     border-radius: 10px;
     background: green;
     outline: none;
+    border-color: green;
+    border: none;
+    cursor: pointer;
 }
-
+ 
 .move{
     font-size: 2rem;
     font-weight: bold;
 }
-
-.reload{
+ 
+.reload {
     display: none;
     margin-top: 2rem;
     padding: 1rem;
     background: green;
     outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
-
+ 
 .result{
     margin-top: 20px;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
+ 
